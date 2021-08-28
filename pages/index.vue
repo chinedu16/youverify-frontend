@@ -46,7 +46,7 @@
             "
           >
             <span> Agents </span>
-            <i class="el-icon-search"></i>
+            <i class="el-icon-search cursor-pointer"></i>
           </div>
           <Agent />
         </div>

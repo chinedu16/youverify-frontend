@@ -2,17 +2,17 @@
   <div class="" id="agents">
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="All " name="first">
-        <div v-for="i in 18" :key="i">
+        <div v-for="i in 4" :key="i">
           <SingleAgent />
         </div>
       </el-tab-pane>
       <el-tab-pane label="Online" name="second">
-        <div v-for="i in 10" :key="i">
+        <div v-for="i in 2" :key="i">
           <SingleAgent />
         </div>
       </el-tab-pane>
       <el-tab-pane label="Offline" name="third">
-        <div v-for="i in 8" :key="i">
+        <div v-for="i in 2" :key="i">
           <SingleAgent />
         </div>
       </el-tab-pane>
@@ -44,10 +44,15 @@ export default {
   padding: 0px 20px;
 }
 
+
 #agents .el-tabs__item {
-  padding: 0px 10px;
+  padding: 0px 20px 0px 0px;
+  color: #C4C4C4;
+  outline: none;
+}
+
+#agents .el-tabs__item.is-active {
   color: #023a59;
-	outline: none;
 }
 
 #agents .el-tabs__active-bar {

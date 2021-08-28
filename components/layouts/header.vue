@@ -48,14 +48,14 @@
               justify-center
               items-center
               rounded-full
-              bg-red-500
+              bg-redDark
               absolute
               top-0
               right-0
               text-white text-center
             "
           >
-            <span class="text-white text-sm">2</span>
+            <span class="text-white text-xs">2</span>
           </span>
         </div>
         <img class="hidden md:block ml-5 rounded-full" src="/user-1.png" alt="" />
@@ -125,5 +125,9 @@ export default {
 #header .el-input__inner {
   height: 58px;
   background: #f1f1f1;
+}
+
+#header .el-dropdown {
+  color: #023A59;
 }
 </style>

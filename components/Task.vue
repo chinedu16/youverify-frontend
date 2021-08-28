@@ -45,9 +45,13 @@ export default {
 }
 
 #tasks .el-tabs__item {
-  padding: 0px 10px;
-  color: #023a59;
+  padding: 0px 20px 0px 0px;
+  color: #C4C4C4;
   outline: none;
+}
+
+#tasks .el-tabs__item.is-active {
+  color: #023a59;
 }
 
 #tasks .el-tabs__active-bar {
