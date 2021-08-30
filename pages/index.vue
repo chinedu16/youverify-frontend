@@ -16,7 +16,7 @@
         </div>
         <div
           class="
-            bg-black
+            bg-blackLight
             flex
             justify-center
             items-center
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="z-50 absolute h-full top-0 right-0 flex">
-        <div class="bg-black flex justify-center items-center h-10 w-10 cursor-pointer" @click="toggleRight">
+        <div class="bg-blackLight flex justify-center items-center h-10 w-10 cursor-pointer" @click="toggleRight">
           <i :class="`${rotate_right} sidebarIcon text-white el-icon-arrow-right`"></i>
         </div>
         <div :class="`${active_right} overflow-scroll right-card bg-white`">

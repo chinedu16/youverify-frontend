@@ -18,9 +18,12 @@
           shadow-md
         "
       >
-        <i :class="`${rotate} sidebarIcon text-darkPrimary el-icon-back cursor-pointer`" @click="toggleSidebar"></i>
+        <i
+          :class="`${rotate} sidebarIcon text-darkPrimary el-icon-back cursor-pointer`"
+          @click="toggleSidebar"
+        ></i>
       </div>
-      <div class="hidden md:block">
+      <div class="header-action hidden md:block">
         <el-input
           placeholder="Search for anything here"
           v-model="input3"
@@ -58,7 +61,11 @@
             <span class="text-white text-xs">2</span>
           </span>
         </div>
-        <img class="hidden md:block ml-5 rounded-full" src="/user-1.png" alt="" />
+        <img
+          class="hidden md:block ml-5 rounded-full"
+          src="/user-1.png"
+          alt=""
+        />
         <el-dropdown class="ml-5">
           <span class="el-dropdown-link">
             Solomon<i class="el-icon-arrow-down el-icon--right"></i>
@@ -95,13 +102,17 @@ export default {
   methods: {
     toggleSidebar() {
       this.rotate = !this.rotate;
-      this.$emit('isToggleSidebar');
-    }
-  }
+      this.$emit("isToggleSidebar");
+    },
+  },
 };
 </script>
 
 <style>
+#header .header-action .el-input-group__prepend {
+  border: 1px solid white;
+  border-right-width: 0px;
+}
 #header .el-select {
   width: 94px;
 }
@@ -125,9 +136,19 @@ export default {
 #header .el-input__inner {
   height: 58px;
   background: #f1f1f1;
+  padding: 0 24px 0 14px;
+  border: none;
+  border-left: 1px solid #E6E6E6;
+}
+#header .el-select .el-input__inner {
+  border-left: 1px solid white;
+}
+
+#header .el-input__suffix {
+  right: 17px;
 }
 
 #header .el-dropdown {
-  color: #023A59;
+  color: #023a59;
 }
 </style>

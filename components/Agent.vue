@@ -1,17 +1,25 @@
 <template>
   <div class="" id="agents">
-    <el-tabs v-model="activeName" @tab-click="handleClick">
-      <el-tab-pane label="All " name="first">
+    <el-tabs :stretch="stretch" v-model="activeName" @tab-click="handleClick">
+      <el-tab-pane name="first" label="All">
         <div v-for="i in 4" :key="i">
           <SingleAgent />
         </div>
       </el-tab-pane>
-      <el-tab-pane label="Online" name="second">
+      <el-tab-pane name="second">
+        <span slot="label" class="flex items-center">
+          <div class=" mr-1 h-2 w-2 rounded-full bg-green-500"></div>
+          <span>Online</span>
+        </span>
         <div v-for="i in 2" :key="i">
           <SingleAgent />
         </div>
       </el-tab-pane>
-      <el-tab-pane label="Offline" name="third">
+      <el-tab-pane name="third">
+        <span slot="label" class="flex items-center">
+          <div class=" mr-1 h-2 w-2 rounded-full bg-red-500"></div>
+          <span>Offline</span>
+        </span>
         <div v-for="i in 2" :key="i">
           <SingleAgent />
         </div>
@@ -29,6 +37,7 @@ export default {
   data() {
     return {
       activeName: "first",
+      stretch: true,
     };
   },
   methods: {
@@ -44,10 +53,9 @@ export default {
   padding: 0px 20px;
 }
 
-
 #agents .el-tabs__item {
   padding: 0px 20px 0px 0px;
-  color: #C4C4C4;
+  color: #c4c4c4;
   outline: none;
 }
 
