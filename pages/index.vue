@@ -16,7 +16,7 @@
         </div>
         <div
           class="
-            bg-blackLight
+            bg-black
             flex
             justify-center
             items-center
@@ -85,11 +85,6 @@ export default {
   width: 391px;
 }
 
-.left-card {
-  display: none;
-  
-}
-
 .sidebarIcon.true {
   transition: all 0.45s;
   transform: rotate(180deg);
@@ -100,19 +95,28 @@ export default {
   transform: rotate(0deg);
 }
 
+.left-card {
+  /* display: none; */
+  width: 0!important;
+  transition: 0.5s;
+}
+
 .left-card.true {
-  width: 351px;
-  display: block;
-  
+  /* display: block; */
+  width: 351px !important;
+  transition: 0.5s;
 }
 
 .right-card {
-  display: none;
+  /* display: none; */
+  width: 0!important;
+  transition: 0.5s;
 }
 
 .right-card.true {
-  width: 351px;
-  display: block;
+  /* display: block; */
+  width: 351px !important;
+  transition: 0.5s;
   overflow: scroll;
 }
 

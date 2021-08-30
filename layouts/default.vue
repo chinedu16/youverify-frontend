@@ -5,7 +5,7 @@
     </el-header>
     <el-container>
       <transition name="slide">
-        <el-aside width="241px" :class="`${active} bg-secondary text-white`">
+        <el-aside :class="`${active} bg-secondary text-white`">
           <Sidebar />
         </el-aside>
       </transition>
@@ -40,12 +40,17 @@ export default {
 
 <style>
 .el-aside {
-  display: none;
+  /* display: none; */
+  width: 0!important;
+  transition: 0.5s;
 }
 
 .el-aside.true {
-  display: block;
+  /* display: block; */
+  width: 250px !important;
+  transition: 0.5s;
 }
+
 body {
   font-family: "BR Sonoma" !important;
 }
